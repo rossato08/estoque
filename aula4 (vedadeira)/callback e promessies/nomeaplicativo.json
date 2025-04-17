@@ -1,0 +1,19 @@
+{
+    "produtos": [
+        {
+            "nome_aplicacao": "uber",
+            "versao": "1.0.0",
+            "debug_mode": "true",
+            "porta": "3000"
+        },
+
+        
+        {
+            "nome": "bicicleta",
+            "versao": "R$700",
+            "debug_mode": "Bicicleta Perfeita para crianças",
+            "porta": "brinquedos"
+        }
+        
+    ]
+}

@@ -105,7 +105,7 @@ async function exibirMenu() {
             { type: 'input', name: 'preco', message: 'Preço do produto:' }
         ]);
 
-        // Converter id e preco para tipos corretos
+        // Converterndo para os tipo certos para dar certo na hora excluir 
         const produtoCorrigido = {
             id: Number(novoProduto.id),
             nome: novoProduto.nome,
@@ -155,7 +155,7 @@ async function exibirMenu() {
 
         // EXCLUIR PRODUTO
         case 'excluir':
-            if (!(await autenticar())) {
+            if ((await autenticar())) {
                 console.log(chalk.red('Senha incorreta. Acesso negado.'));
                 return exibirMenu();
             }

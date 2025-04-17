@@ -6,6 +6,8 @@ const rotasAdmin = require('./rotasalteraritem');
 const rotasProdutos = require('./rotasprodutos');
 
 
+
+
 app.use(express.json());  
 
 app.get('/', (req, res) => {

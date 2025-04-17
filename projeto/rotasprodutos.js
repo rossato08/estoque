@@ -3,6 +3,28 @@ const router = express.Router();
 const fs = require('fs');
 
 
+
+
+// criando logger ele cria arquivo quando nao existente e adiciona informaçoes em baixo do ultimo acesso 
+const logger = (req, res, next)=>{
+    const data = new Date();
+    const linha =` Data do acesso ao sistema : [${data.toISOString()}]  \n `;
+    
+  
+            fs.appendFile('logger.txt',linha, err =>{
+                if (err) throw err;
+                console.log('Informação Adicionada!');
+              });
+
+              next();
+        }
+   
+router.use(logger);
+
+
+
+// ler arquivo json
+
 let produtos = [];
 try {
     const data = fs.readFileSync('produtos.json', 'utf8');
@@ -63,7 +85,7 @@ router.put('/:id', (req, res) => {
     if (nome) produtos[produtoIndex].nome = nome;
     if (preco) produtos[produtoIndex].preco = parseFloat(preco);
 
-    // Atualizar o arquivo JSON
+ 
     fs.writeFileSync('produtos.json', JSON.stringify(produtos, null, 2));
 
     res.status(200).json(produtos[produtoIndex]);

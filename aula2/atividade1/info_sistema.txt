@@ -1,0 +1,5 @@
+
+plataforma: win32,
+arquitetura: x64,
+informações da CPU: [object Object],[object Object],[object Object],[object Object],[object Object],[object Object],
+diretorio do usuario: C:\Users\24250694,

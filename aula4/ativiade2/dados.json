@@ -1,0 +1,19 @@
+{
+    "produtos": [
+        {
+            "nome": "feijao",
+            "preco": "R$7",
+            "descriçao": "feijao carioca",
+            "categoria": "Alimentos"
+        },
+
+        
+        {
+            "nome": "bicicleta",
+            "preco": "R$700",
+            "descriçao": "Bicicleta Perfeita para crianças",
+            "categoria": "brinquedos"
+        }
+        
+    ]
+}
